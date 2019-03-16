@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import Test from './components/test';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -10,10 +9,25 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+export default class Test extends Component<Props> {
+
+
+	url = "https://antiquarian-inactio.000webhostapp.com/"
+
+	axios.post('url'+connect.php)
+	  .then(function (response) {
+	    console.log(response);
+	  })
+	  .catch(function (error) {
+	    console.log(error);
+	  });
+
   render() {
     return (
-      {test}
+      <View style={styles.container}>
+        <Text style={styles.welcome}>Test connection to webhost!</Text>
+
+      </View>
     );
   }
 }
