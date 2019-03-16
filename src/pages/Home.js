@@ -4,7 +4,7 @@ import {
   Text,
   View
 } from 'react-native';
-import { Button } from '@shoutem/ui';
+import { Button } from 'react-native-paper';
 
 export default class Home extends Component {
   constructor(props) {
