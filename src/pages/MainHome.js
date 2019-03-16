@@ -5,7 +5,6 @@ import {
   View
 } from 'react-native';
 import { Button } from 'react-native-paper';
-import { Actions } from 'react-native-router-flux';
 
 export default class MainHome extends Component {
   constructor(props) {
@@ -18,9 +17,7 @@ export default class MainHome extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to tif mobile portal</Text>
-        <Button onPress={() => Actions.login()}>Login</Button>
-        <Button onPress={() => Actions.register()}>Register</Button>
+        <Text style={styles.welcome}>Hello this is the Home page.</Text>
       </View>
     );
   }

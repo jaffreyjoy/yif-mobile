@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 import {Actions, Router, Stack, Scene} from 'react-native-router-flux';
+import { View } from 'react-native';
 
-import Home from './pages/Home';
-import Events from './pages/Events';
-import Profile from './pages/Profile';
+import BottomNavigator from "./components/BottomNavigator";
+
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import MainHome from "./pages/MainHome";
+import Events from "./pages/Events";
+import Profile from "./pages/Profile";
+import Organizer from "./pages/Organizer";
+import Participant from "./pages/Participant";
+import Admin from "./pages/Admin";
 
 export default class Routes extends Component {
   constructor(props) {
@@ -12,27 +21,23 @@ export default class Routes extends Component {
   };
 
   render() {
-    return(
-      <Router>
-        <Stack key="root" >
-
-        {/*  Pages start  */}
-          <Scene key="home"
-              component={Home}
-              title="Home"
-          />
-          <Scene key="events"
-              component={Events}
-              title="Events"
-          />
-          <Scene key="profile"
-              component={Profile}
-              title="Profile"
-          />
-        {/*  Pages end  */}
-
-        </Stack>
-      </Router>
-    )
+    return (
+      <View style={{flex: 1}}>
+        <Router>
+          <Stack key="root">
+            <Scene key="home" component={Home} title="Home" hideNavBar/>
+            <Scene key="login" component={Login} title="Login" hideNavBar/>
+            <Scene key="register" component={Register} title="Register" hideNavBar/>
+            <Scene key="mainHome" component={MainHome} title="MainHome" hideNavBar/>
+            <Scene key="events" component={Events} title="Events" hideNavBar/>
+            <Scene key="profile" component={Profile} title="Profile" hideNavBar/>
+            <Scene key="organizer" component={Organizer} title="Organizer" hideNavBar/>
+            <Scene key="participant" component={Participant} title="Participant" hideNavBar/>
+            <Scene key="admin" component={Admin} title="Admin" hideNavBar/>
+          </Stack>
+        </Router>
+        <BottomNavigator />
+      </View>
+    );
   }
 }

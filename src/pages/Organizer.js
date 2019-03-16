@@ -10,6 +10,7 @@ import { Actions } from 'react-native-router-flux';
 export default class MainHome extends Component {
   constructor(props) {
     super(props);
+    console.log(this.props.id);
     this.state = {
       key: "choco"
     };
@@ -18,9 +19,8 @@ export default class MainHome extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to tif mobile portal</Text>
-        <Button onPress={() => Actions.login()}>Login</Button>
-        <Button onPress={() => Actions.register()}>Register</Button>
+        <Text style={styles.welcome}>Welcome to organizer portal</Text>
+        <Button onPress={() => Actions.login()}>Add Event</Button>
       </View>
     );
   }
