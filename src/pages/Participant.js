@@ -16,6 +16,7 @@ export default class Participant extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to participant portal</Text>
+        <Button onPress={() => Actions.upcomingevents()}>Upcoming Events</Button>
       </View>
     );
   }
