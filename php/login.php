@@ -12,9 +12,9 @@ class Response{
 
 $response = new Response;
 
-
-$sql = "SELECT * FROM organizers WHERE username = '$username'&& password = '$password'";
+$sql = "SELECT * FROM organizers WHERE username = '$username' AND password = '$password'";
 $result = $conn->query($sql);
+
 
 if ($result) {
 	if($result->num_rows>0){
@@ -29,12 +29,12 @@ if ($result) {
 	}
 }
 
-$sql = "SELECT * FROM participant WHERE username = '$username'&& password = '$password'";
+$sql = "SELECT * FROM participants WHERE username = '$username' AND password = '$password'";
 $result = $conn->query($sql);
 
 if ($result) {
 	if($result->num_rows>0){
-		//organizer
+		//participant
 		while($row = $result->fetch_assoc()){
 	        $ret = json_encode($row);
 	    }
@@ -45,7 +45,7 @@ if ($result) {
 	}
 }
 
-$sql = "SELECT * FROM admin WHERE username = '$username'&& password = '$password'";
+$sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
 $result = $conn->query($sql);
 
 if ($result) {
@@ -60,9 +60,5 @@ if ($result) {
 	    exit(0);
 	}
 }	
-
-
-
-echo json_encode($response);
 
 ?>
