@@ -9,7 +9,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@shoutem/ui": "^0.23.18",
     "axios": "^0.18.0",
     "react": "16.8.3",
     "react-native": "0.59.1",
