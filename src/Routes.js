@@ -7,6 +7,8 @@ import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
+import MainApp from "./components/MainApp";
+
 export default class Routes extends Component {
   constructor(props) {
     super(props);
@@ -14,35 +16,16 @@ export default class Routes extends Component {
   };
 
   render() {
-    return(
+    return (
       <Router>
-        <Stack key="root" >
-
+        <Stack key="root">
         {/*  Pages start  */}
-          <Scene key="home"
-              component={Home}
-              title="Home"
-          />
-          <Scene key="events"
-              component={Events}
-              title="Events"
-          />
-          <Scene key="profile"
-              component={Profile}
-              title="Profile"
-          />
-          <Scene key="login"
-              component={Login}
-              title="Login"
-          />
-          <Scene key="register"
-              component={Register}
-              title="Register"
-          />
+          <Scene key="register" component={Register} title="Register" hideNavBar/>
+          <Scene key="login" component={Login} title="Login" hideNavBar/>
+          <Scene key="mainApp" component={MainApp} title="MainApp" hideNavBar/>
         {/*  Pages end  */}
-
         </Stack>
       </Router>
-    )
+    );
   }
 }

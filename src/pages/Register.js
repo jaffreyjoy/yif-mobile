@@ -4,14 +4,14 @@ import {
   Text,
   View
 } from 'react-native';
-import { TextInput, Button } from 'react-native-paper';
+import { TextInput, Button, RadioButton } from 'react-native-paper';
 import Register from '../utils/request';
 
 export default class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user_type: null,
+      user_type: 'Participant',
       username: null,
       password: null,
       email_id: null,
@@ -23,18 +23,25 @@ export default class Profile extends Component {
   };
 
   handleRegisterClick = () => {
-    const registerDetails = {
-        username: this.state.username,
-        password: this.state.password
-    };
-    Login('login.php', loginDetails)
+    Register('register.php', this.state)
     .then((res) => console.log(res))
     .catch((err) => console.log(err));
   }
 
   render() {
+    const { user_type } = this.state;
     return (
       <View>
+        <RadioButton
+          value="Participant"
+          status={user_type === 'Participant' ? 'checked' : 'unchecked'}
+          onPress={() => { this.setState({ user_type: 'Participant' }); }}
+        />
+        <RadioButton
+          value="Organizer"
+          status={user_type === 'Organizer' ? 'checked' : 'unchecked'}
+          onPress={() => { this.setState({ user_type: 'Organizer' }); }}
+        />
         <TextInput
             mode='outlined'
             label='Username'
@@ -48,7 +55,7 @@ export default class Profile extends Component {
             value={this.state.password}
             onChangeText={password => this.setState({ password })}
         />
-        <Button mode="contained" onPress={this.handleLoginClick}>
+        <Button mode="contained" onPress={this.handleRegisterClick}>
             Login
         </Button>
       </View>

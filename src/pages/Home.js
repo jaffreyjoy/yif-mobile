@@ -21,14 +21,8 @@ export default class Home extends Component {
         <Text style={styles.welcome}>
          Hello this is the Home page.
         </Text>
-        <Button mode="contained" onPress={() => Actions.login()}>
-          Login
-        </Button>
-        <Button mode="contained" onPress={() => Actions.register()}>
-          Register
-        </Button>
       </View>
-    )
+    );
   }
 }
 
