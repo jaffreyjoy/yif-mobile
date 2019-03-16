@@ -4,6 +4,7 @@ import {
   Text,
   View
 } from 'react-native';
+import { Button } from '@shoutem/ui';
 
 export default class Home extends Component {
   constructor(props) {
@@ -19,6 +20,8 @@ export default class Home extends Component {
         <Text style={styles.welcome}>
          Hello this is the Home page.
         </Text>
+        <Button>Login</Button>
+        <Button>Register</Button>
       </View>
     )
   }

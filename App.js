@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import Test from './components/test';
 
 import Routes from './src/Routes';
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
 
   constructor(props){
-    super(props)
-    Test().then((res)=>console.log(res))
-          .catch((err)=>console.log(err))
+    super(props);
+    console.log('loaded');
   }
 
   render() {

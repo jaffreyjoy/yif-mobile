@@ -9,10 +9,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "@shoutem/ui": "^0.23.18",
     "axios": "^0.18.0",
     "react": "16.8.3",
     "react-native": "0.59.1",
+    "react-native-paper": "^2.13.0",
     "react-native-router-flux": "^4.0.6",
     "react-native-sqlite-storage": "^3.3.10"
   },
