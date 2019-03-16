@@ -5,6 +5,7 @@ import {
   View
 } from 'react-native';
 import { Button } from 'react-native-paper';
+import { Actions } from 'react-native-router-flux';
 
 export default class Home extends Component {
   constructor(props) {
@@ -20,8 +21,12 @@ export default class Home extends Component {
         <Text style={styles.welcome}>
          Hello this is the Home page.
         </Text>
-        <Button>Login</Button>
-        <Button>Register</Button>
+        <Button mode="contained" onPress={() => Actions.login()}>
+          Login
+        </Button>
+        <Button mode="contained" onPress={() => Actions.register()}>
+          Register
+        </Button>
       </View>
     )
   }

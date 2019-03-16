@@ -4,6 +4,8 @@ import {Actions, Router, Stack, Scene} from 'react-native-router-flux';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import Profile from './pages/Profile';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 export default class Routes extends Component {
   constructor(props) {
@@ -28,6 +30,14 @@ export default class Routes extends Component {
           <Scene key="profile"
               component={Profile}
               title="Profile"
+          />
+          <Scene key="login"
+              component={Login}
+              title="Login"
+          />
+          <Scene key="register"
+              component={Register}
+              title="Register"
           />
         {/*  Pages end  */}
 
