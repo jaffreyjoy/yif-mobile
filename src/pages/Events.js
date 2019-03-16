@@ -4,9 +4,8 @@ import {
   Text,
   View
 } from 'react-native';
-import { Button } from 'react-native-paper';
 
-export default class Home extends Component {
+export default class Events extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,10 +17,8 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-         Hello this is the Home page.
+         Hello this is the Events page.
         </Text>
-        <Button>Login</Button>
-        <Button>Register</Button>
       </View>
     )
   }
