@@ -7,12 +7,9 @@ import {
 import { Button } from 'react-native-paper';
 import { Actions } from 'react-native-router-flux';
 
-export default class MainHome extends Component {
+export default class Participant extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      key: "choco"
-    };
   };
 
   render() {

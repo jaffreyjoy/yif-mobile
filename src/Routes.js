@@ -13,6 +13,7 @@ import Profile from "./pages/Profile";
 import Organizer from "./pages/Organizer";
 import Participant from "./pages/Participant";
 import Admin from "./pages/Admin";
+import AddEvent from "./pages/AddEvent";
 
 export default class Routes extends Component {
   constructor(props) {
@@ -34,6 +35,7 @@ export default class Routes extends Component {
             <Scene key="organizer" component={Organizer} title="Organizer" hideNavBar/>
             <Scene key="participant" component={Participant} title="Participant" hideNavBar/>
             <Scene key="admin" component={Admin} title="Admin" hideNavBar/>
+            <Scene key="addevent" component={AddEvent} title="AddEvent" hideNavBar/>
           </Stack>
         </Router>
         <BottomNavigator />
