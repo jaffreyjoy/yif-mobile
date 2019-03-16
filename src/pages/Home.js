@@ -18,7 +18,7 @@ export default class MainHome extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to tif mobile portal</Text>
+        <Text style={styles.welcome}>Welcome to yif mobile portal</Text>
         <Button onPress={() => Actions.login()}>Login</Button>
         <Button onPress={() => Actions.register()}>Register</Button>
       </View>
