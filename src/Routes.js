@@ -25,11 +25,11 @@ export default class Routes extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <Router>
+        <Router style={{flex: 1}}>
           <Stack key="root">
             <Scene key="home" component={Home} title="Home" hideNavBar/>
-            <Scene key="login" component={Login} title="Login" hideNavBar/>
-            <Scene key="register" component={Register} title="Register" hideNavBar/>
+            <Scene key="login" component={Login} title="Login"/>
+            <Scene key="register" component={Register} title="Register"/>
             <Scene key="mainHome" component={MainHome} title="MainHome" hideNavBar/>
             <Scene key="events" component={Events} title="Events" hideNavBar/>
             <Scene key="profile" component={Profile} title="Profile" hideNavBar/>

@@ -73,7 +73,7 @@ export default class Profile extends Component {
           {this.generateProfileItems()}
           {/* <Divider /> */}
           <Button iconLeft full bordered style={styles.saveButton}>
-            <Icon name="save" size={20} color="#3F51B5" />
+            <Icon name='save' size={20} color='#2E303C' />
             <Text>Save Details</Text>
           </Button>
         </Form>
