@@ -6,6 +6,8 @@ import {
 } from 'react-native';
 import { Button } from 'react-native-paper';
 
+import BottomNavigator from "../components/BottomNavigator";
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -17,13 +19,11 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-         Hello this is the Home page.
-        </Text>
+        <Text style={styles.welcome}>Hello this is the Home page.</Text>
         <Button>Login</Button>
         <Button>Register</Button>
       </View>
-    )
+    );
   }
 }
 
