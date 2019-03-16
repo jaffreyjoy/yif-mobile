@@ -5,10 +5,10 @@ import {
   View
 } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
-import Login from '../utils/request';
+import ExecLogin from '../utils/request';
 import { Actions } from 'react-native-router-flux';
 
-export default class Profile extends Component {
+export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,15 +18,15 @@ export default class Profile extends Component {
   };
 
   handleLoginClick = () => {
-    Login('login.php', this.state)
+    ExecLogin('login.php', this.state)
       .then((res) => {
         console.log(res);
         if (res.data.user_type === 0) {
-          Actions.organizer({ id: res.data.res.id });
+          Actions.organizer({ info: res.data.res });
         } else if (res.data.user_type === 1) {
-          Actions.participant({ id: res.data.res.id });
+          Actions.participant({ info: res.data.res });
         } else if (res.data.user_type === 2) {
-          Actions.admin({ id: res.data.res.id });
+          Actions.admin({ info: res.data.res });
         }
       })
       .catch((err) => console.log(err));

@@ -7,20 +7,17 @@ import {
 import { Button } from 'react-native-paper';
 import { Actions } from 'react-native-router-flux';
 
-export default class MainHome extends Component {
+export default class Organizer extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props.id);
-    this.state = {
-      key: "choco"
-    };
+    this.info = JSON.parse(props.info)
   };
 
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to organizer portal</Text>
-        <Button onPress={() => Actions.login()}>Add Event</Button>
+        <Button onPress={() => Actions.addevent({ id: this.info.id })}>Add Event</Button>
       </View>
     );
   }

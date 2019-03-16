@@ -7,9 +7,9 @@ import {
 import { TextInput, Button, Snackbar } from 'react-native-paper';
 import { Icon, Picker } from "native-base";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import Register from '../utils/request';
+import ExecRegister from '../utils/request';
 
-export default class Profile extends Component {
+export default class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -92,7 +92,7 @@ export default class Profile extends Component {
         snackVisible: true
       })
     } else {
-      Register('register.php', registerDetails)
+      ExecRegister('register.php', registerDetails)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
     }
