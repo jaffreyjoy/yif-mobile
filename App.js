@@ -11,9 +11,17 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+
+  constructor(props){
+    super(props)
+    Test().then((res)=>console.log(res))
+          .catch((err)=>console.log(err))
+  }
+
   render() {
     return (
-      {test}
+      <View>
+      </View>
     );
   }
 }
