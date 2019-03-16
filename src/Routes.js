@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import {Actions, Router, Stack, Scene} from 'react-native-router-flux';
+import { View } from 'react-native';
 
+import BottomNavigator from "./components/BottomNavigator";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import MainApp from "./components/MainApp";
+import MainHome from "./pages/MainHome";
+import Events from "./pages/Events";
+import Profile from "./pages/Profile";
 
 export default class Routes extends Component {
   constructor(props) {
@@ -15,14 +19,19 @@ export default class Routes extends Component {
 
   render() {
     return (
-      <Router>
-        <Stack key="root">
-          <Scene key="home" component={Home} title="Home" hideNavBar/>
-          <Scene key="login" component={Login} title="Login" hideNavBar/>
-          <Scene key="register" component={Register} title="Register" hideNavBar/>
-          <Scene key="mainApp" component={MainApp} title="MainApp" hideNavBar/>
-        </Stack>
-      </Router>
+      <View style={{flex: 1}}>
+        <Router>
+          <Stack key="root">
+            <Scene key="home" component={Home} title="Home" hideNavBar/>
+            <Scene key="login" component={Login} title="Login" hideNavBar/>
+            <Scene key="register" component={Register} title="Register" hideNavBar/>
+            <Scene key="mainHome" component={MainHome} title="MainHome" hideNavBar/>
+            <Scene key="events" component={Events} title="Events" hideNavBar/>
+            <Scene key="profile" component={Profile} title="Profile" hideNavBar/>
+          </Stack>
+        </Router>
+        <BottomNavigator />
+      </View>
     );
   }
 }
