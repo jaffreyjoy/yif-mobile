@@ -10,6 +10,9 @@ import Register from "./pages/Register";
 import MainHome from "./pages/MainHome";
 import Events from "./pages/Events";
 import Profile from "./pages/Profile";
+import Organizer from "./pages/Organizer";
+import Participant from "./pages/Participant";
+import Admin from "./pages/Admin";
 
 export default class Routes extends Component {
   constructor(props) {
@@ -28,6 +31,9 @@ export default class Routes extends Component {
             <Scene key="mainHome" component={MainHome} title="MainHome" hideNavBar/>
             <Scene key="events" component={Events} title="Events" hideNavBar/>
             <Scene key="profile" component={Profile} title="Profile" hideNavBar/>
+            <Scene key="organizer" component={Organizer} title="Organizer" hideNavBar/>
+            <Scene key="participant" component={Participant} title="Participant" hideNavBar/>
+            <Scene key="admin" component={Admin} title="Admin" hideNavBar/>
           </Stack>
         </Router>
         <BottomNavigator />
