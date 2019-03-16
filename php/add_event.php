@@ -3,14 +3,14 @@ include 'connect.php';
 
 $data = json_decode(file_get_contents("php://input"), true);
 
-$title = $_data["title"];
-$description = $_data["description"];
-$address = $_data["address"];
-$start_date = $_data["start_date"];
-$end_date = $_data["end_date"];
-$start_time = $_data["start_time"];
-$end_time = $_data["end_time"];
-$organizer_id = $_data["organizer_id"];
+$title = $data["title"];
+$description = $data["description"];
+$address = $data["address"];
+$start_date = $data["start_date"];
+$end_date = $data["end_date"];
+$start_time = $data["start_time"];
+$end_time = $data["end_time"];
+$organizer_id = $data["organizer_id"];
 
 // $city = $_data["city"];
 // $state = $_data["state"];
