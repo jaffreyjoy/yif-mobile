@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { StyleSheet } from 'react-native';
 import { Footer, FooterTab, Button, Icon, Text } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
@@ -49,11 +50,18 @@ export default class BottomNavigator extends Component {
 
   render() {
     return (
-      <Footer>
+      <Footer style={{ flex: 0.1 }}>
         <FooterTab>
           { this.generateFooterChildern() }
         </FooterTab>
       </Footer>
     );
   }
+
 }
+
+const styles = StyleSheet.create({
+  footerBackColor: {
+    backgroundColor: '#22C3F3'
+  }
+})
