@@ -17,9 +17,7 @@ export default class MainHome extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to tif mobile portal</Text>
-        <Button>Login</Button>
-        <Button>Register</Button>
+        <Text style={styles.welcome}>Hello this is the Home page.</Text>
       </View>
     );
   }

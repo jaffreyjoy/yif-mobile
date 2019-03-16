@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BottomNavigation, Text } from 'react-native-paper';
 import { Actions } from 'react-native-router-flux';
 
-import Home from "../pages/Home";
+import Home from "../pages/MainHome";
 import Events from "../pages/Events";
 import Profile from "../pages/Profile";
 
